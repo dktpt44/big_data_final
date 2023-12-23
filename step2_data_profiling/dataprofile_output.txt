@@ -1,0 +1,115 @@
+dt2202_nyu_edu@nyu-dataproc-m:~/proj/task2$ spark-shell --deploy-mode client -i profiling.scala
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/12/04 02:35:08 INFO org.apache.spark.SparkEnv: Registering MapOutputTracker
+23/12/04 02:35:08 INFO org.apache.spark.SparkEnv: Registering BlockManagerMaster
+23/12/04 02:35:08 INFO org.apache.spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+23/12/04 02:35:08 INFO org.apache.spark.SparkEnv: Registering OutputCommitCoordinator
+Spark context Web UI available at http://nyu-dataproc-m.c.hpc-dataproc-19b8.internal:38051
+Spark context available as 'sc' (master = yarn, app id = application_1691775874963_37994).
+Spark session available as 'spark'.
++-------+----------+                                                            
+|summary|State_name|
++-------+----------+
+|  count|     15533|
+|   mean|      null|
+| stddev|      null|
+|    min|   Alabama|
+|    25%|      null|
+|    50%|      null|
+|    75%|      null|
+|    max|   Wyoming|
++-------+----------+
+
+Number of unique values in State_name: 55
+Number of NaN values in State_name: 0
++-------+----------+
+|summary|      Date|
++-------+----------+
+|  count|     15533|
+|   mean|      null|
+| stddev|      null|
+|    min|2020-05-30|
+|    25%|      null|
+|    50%|      null|
+|    75%|      null|
+|    max|2021-04-02|
++-------+----------+
+
+Number of unique values in Date: 283
+Number of NaN values in Date: 0
++-------+------------------+
+|summary|         Confirmed|
++-------+------------------+
+|  count|             15533|
+|   mean|214295.18084079056|
+| stddev| 366675.1765261979|
+|    min|                 6|
+|    25%|             22814|
+|    50%|             89365|
+|    75%|            255641|
+|    max|           3654074|
++-------+------------------+
+
+Number of unique values in Confirmed: 14151
+Number of NaN values in Confirmed: 0
++-------+------------------+
+|summary|            Deaths|
++-------+------------------+
+|  count|             15533|
+|   mean| 4595.823150711389|
+| stddev|7275.2610928613385|
+|    min|                 0|
+|    25%|               443|
+|    50%|              1778|
+|    75%|              5549|
+|    max|             53987|
++-------+------------------+
+
+Number of unique values in Deaths: 7224
+Number of NaN values in Deaths: 0
++-------+---------+
+|summary|Recovered|
++-------+---------+
+|  count|    15533|
+|   mean|      0.0|
+| stddev|      0.0|
+|    min|        0|
+|    25%|        0|
+|    50%|        0|
+|    75%|        0|
+|    max|        0|
++-------+---------+
+
+Number of unique values in Recovered: 1
+Number of NaN values in Recovered: 0
++-------+------------------+
+|summary|     Incident_rate|
++-------+------------------+
+|  count|             15533|
+|   mean| 3156.145239671662|
+| stddev| 3064.856418771812|
+|    min|20.341741253051257|
+|    25%| 739.1347546419642|
+|    50%|1868.7906935318692|
+|    75%| 5006.321598205033|
+|    max|12529.075908108916|
++-------+------------------+
+
+Number of unique values in Incident_rate: 14742
+Number of NaN values in Incident_rate: 0
++-------+------------------+
+|summary|    fatality_ratio|
++-------+------------------+
+|  count|             15533|
+|   mean|2.3316555718504315|
+| stddev|1.5976732346880493|
+|    min|               0.0|
+|    25%|1.3582195731230535|
+|    50%|1.8970735236684744|
+|    75%| 2.795688351157862|
+|    max|10.454128845858593|
++-------+------------------+
+
+Number of unique values in fatality_ratio: 14440
+Number of NaN values in fatality_ratio: 0
